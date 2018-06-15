@@ -5,11 +5,13 @@ import TestComponent from './components/test_component';
 import TestComponent2 from './components/test_component2';
 import Comment from './components/comment';
 import CheckBox from './components/checkbox';
+import ColorChange from './components/color_change';
 
 function Root() {
   return(
     <div>
       <CheckBox />
+      <ColorChange />
       <Comment>Hello</Comment>
       <Comment>My</Comment>
       <Comment>Nem</Comment>
