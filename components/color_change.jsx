@@ -6,12 +6,14 @@ export default class ColorChange extends React.Component {
     super();
 
     this.state = { color: "blue" };
+    this.colors = ["blue", "yellow", "green", "red"];
     this.changeColor = this.changeColor.bind(this);
   }
 
 
   changeColor() {
-    this.setState({color: "green"});
+    let randColor = this.colors[Math.floor(Math.random() * this.colors.length)];
+    this.setState({color: randColor});
   }
 
 
