@@ -17,6 +17,7 @@ export default class Comment extends React.Component {
     this.props.removeComment(this.props.index);
   }
 
+
   render() {
     return(
       <div>

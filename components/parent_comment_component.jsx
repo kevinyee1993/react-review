@@ -11,6 +11,14 @@ export default class ParentComment extends React.Component {
     };
 
     this.removeComment = this.removeComment.bind(this);
+    this.addComment = this.addComment.bind(this);
+  }
+
+  addComment() {
+    let arr = this.state.array;
+    let comment = 4;
+    arr.push(comment);
+    this.setState({comments: arr});
   }
 
   removeComment(i) {
@@ -22,8 +30,11 @@ export default class ParentComment extends React.Component {
   render() {
     return(
       <div>
+        <button onClick={ this.addComment }> Add </button>
         {
-          this.state.array.map((el, idx) => <Comment key={ idx } index={ idx } removeComment = { this.removeComment }>
+          this.state.array.map((el, idx) => <Comment key={ idx }
+          index={ idx }
+          removeComment = { this.removeComment }>
            { el }
           </Comment> )
         }
