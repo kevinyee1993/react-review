@@ -7,15 +7,18 @@ import Comment from './components/comment';
 import CheckBox from './components/checkbox';
 import ColorChange from './components/color_change';
 import RefsComponent from './components/refs_component';
+import ParentComment from './components/parent_comment_component';
 
 
 function Root() {
   return(
     <div>
+      <ParentComment />
+      <RefsComponent />
       <RefsComponent />
       <CheckBox />
       <ColorChange />
-      <Comment>Hello</Comment>
+      <Comment fart="fart">Hello</Comment>
       <Comment>My</Comment>
       <Comment>Nem</Comment>
       <Comment>Jeff</Comment>

@@ -3,12 +3,18 @@ import ReactDOM from 'react-dom';
 
 export default class Comment extends React.Component {
 
+  constructor() {
+    super();
+    this.delete = this.delete.bind(this);
+    this.edit = this.edit.bind(this);
+  }
+
   edit() {
     alert("editing comment");
   }
 
   delete() {
-    alert("deleting comment");
+    this.props.removeComment(this.props.index);
   }
 
   render() {
